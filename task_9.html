@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baseCampTask_9</title>
+</head>
+<body>
+
+<script type="text/javascript">
+//9.	Write a function that takes a string and determines if the string is a palindrome. A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as madam, racecar. The function should return “Yes” if the word is a palindrome and “No” if it isn’t. 
+	
+function isPalindrome(str){
+   let rev = "";
+   for(let i = str.length; i >= 0; i--){
+       rev += str[i];
+   };
+
+   return str === rev ? "Yes" : "No";
+};	
+    alert(isPalindrome(str));
+</script>
+</body>
+</html>

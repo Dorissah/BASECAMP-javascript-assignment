@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baseCampTask_10</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+function letterFrequency(str){
+    let freqObj = {};
+
+    for(let value of str){
+        freqObj[value] = freqObj[value] ? freqObj[value] + 1 : 1;
+    }
+
+   let highest = 0;
+
+   Object.values(freqObj).forEach(freq=>{
+     if(freq > highest){
+         highest = freq;
+     }
+   });
+
+   let resArr = [];
+   Object.keys(freqObj).forEach(value=>{
+       if(freqObj[value] === highest){
+           resArr.push({[value]: highest});
+       }
+   })
+
+   return resArr.length > 1 ? resArr : resArr[0];
+}	
+</script>
+</body>
+</html>

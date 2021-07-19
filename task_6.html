@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baseCampTask_6</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    /* a function that takes two parameters, an array and some number. The function determine whether any three numbers in the array add up to the number. If it does, the function returns the numbers as an array. If it doesn’t, the function returns -1 */
+	
+	function threeValues(numArr, num){
+  numArr = numArr.filter(value=> value > num ? false : true);//filter out values larger than num since they are unneccessary;
+
+  let numObj = {};
+
+  numArr.forEach(value=>{
+      numObj[value] = true;//convert numArr to an object of numbers
+  });
+
+  for(let i=0; i < numArr.length; i++){
+      for(let j=i+1; j < numArr.length; j++){
+          let test = num - numArr[i] - numArr[j];
+          if(numObj[test]){
+              return [numArr[i], numArr[j], test];
+          }
+      }
+  }
+}; 
+    alert(threeValues(numArr = prompt ("Enter Your"))); 
+</script>
+</body>
+</html>

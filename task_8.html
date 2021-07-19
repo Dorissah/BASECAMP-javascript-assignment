@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baseCampTask_8</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  //	Write a method to count the number of 3s that appear in all the numbers between 0 and n (inclusive). It should return an object containing the count of the number of 3s that appear and an array of the numbers that have 3s in them
+	function threes(num){
+  let count = 0;
+  let numbers = [];
+
+  for(let i = 0; i <= num; i++){
+      let test = String(i).split("3");
+      if(test.length > 1){
+          count += test.length - 1;
+          numbers.push(i);
+      }
+  }
+
+  return {count, numbers};
+}
+
+</script>
+</body>
+</html>

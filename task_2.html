@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baseCampTASK_2</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//	a function that accepts a positive integer and determines if it is a prime number. The function will return true if it is a prime number or false if it isn’t.
+
+function aPrimeNum(nP) {
+  for (var i = 2; i < nP; i++) { 
+  // i will always be less than the parameter so the condition below will never allow parameter to be divisible by itself e.g. (1 % 1 = 0) which would return true
+
+    if(nP % i === 0) return false; // when parameter is divisible by i, it's not a prime number so return false
+  }
+  return nP > 1; 
+  // otherwise it's a prime number so return true (it also must be greater than 1, reason for the nP > 1 instead of true)
+}
+
+alert(aPrimeNum(nP= prompt("Please enter number")));  // returns false
+
+</script>
+</body>
+</html>

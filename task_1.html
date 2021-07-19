@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task_1.js</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	//a function that takes an array of positive integers. The function calculates the sum of all even and odd integers and return an array containing the sums.
+
+
+function sumOfEvenAndOddInts(arr){
+    let resArr = [];
+    //array to store the values;
+    arr.forEach(value=>{      //iterate over the values in the array;
+        if(value%2 === 0){    //if value is even
+           resArr[0] = resArr[0] ? resArr[0] + value : value;      
+                              //if index 0 of resArr is empty, make it equal to the value, otherwise add current value to the value in index 0 of resArr;
+        }else{                //if value is odd
+           resArr[1] = resArr[1] ? resArr[1] + value : value;//if index 1 of resArr is empty, make it equal to the value, otherwise add current value to the value in index 1 of resArr;
+          }
+      });
+      return resArr;//return resArr;
+    };
+        alert(sumOfEvenAndOddInts([0,1,2,3,4,5,6,7,8,9]));
+ 
+</script>
+
+</body>
+</html>

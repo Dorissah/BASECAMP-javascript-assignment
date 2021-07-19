@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baseCampTask_7</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function standardDev(arr){
+    let mean = (arr.reduce((acc, val)=>acc + val))/arr.length;
+
+    let variance = (arr.map(value=>value - mean)
+                   .map(value=>value**2)
+                   .reduce((acc, val)=>acc + val))/arr.length;
+
+    return Math.sqrt(variance);
+}
+    
+</script>
+</body>
+</html>
